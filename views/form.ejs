@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>
+      <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <h1>
+      <%= title %>
+    </h1>
+    <form class="message-form" action="/form" method="POST">
+      <div class="form-control">
+        <label for="user">Username</label>
+        <input type="text" name="user" id="user">
+      </div>
+      <div class="form-control">
+        <label for="text">Message</label>
+        <input type="text" name="text" id="text">
+      </div>
+      <button type="submit">Send</button>
+    </form>
+
+  </body>
+
+</html>
