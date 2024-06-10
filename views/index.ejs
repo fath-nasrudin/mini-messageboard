@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title><%= title %></title>
+    <title>
+      <%= title %>
+    </title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
+
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>
+      <%= title %>
+    </h1>
+    <p>Welcome to <%= title %>
+    </p>
+
+    <div class="messageboard">
+      <% messages.forEach(message=> { %>
+        <div class="message">
+          <div class="message__user">
+            <%= message.user %>
+          </div>
+          <div class="message__text">
+            <%= message.text %>
+          </div>
+          <div class="message__time">
+            <%= message.added %>
+          </div>
+        </div>
+        <% }) %>
+    </div>
+
   </body>
+
 </html>
